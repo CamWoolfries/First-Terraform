@@ -108,7 +108,7 @@ resource "aws_instance" "main_server"{
     ami                 = "ami-09e67e426f25ce0d7"
     instance_type       = "t2.micro"
     availability_zone   = "us-east-1a"
-    key_name            = "main_key"
+    key_name            = var.ec2_ssh_key
 
     network_interface {
       device_index = 0
